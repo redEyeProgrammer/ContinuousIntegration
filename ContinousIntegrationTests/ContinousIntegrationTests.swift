@@ -17,7 +17,7 @@ class ContinousIntegrationTests: XCTestCase {
     }
 
     func testExample() {
-        let value = true
+        let value = false
         XCTAssertFalse(value)
     }
 }
