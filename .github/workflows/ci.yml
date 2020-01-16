@@ -5,11 +5,11 @@ on: [push]
 jobs:
   build:
   
-  runs-on: macOS-latest
+    runs-on: macos-latest
   
-  steps:
-  - uses: actions/checkout@v1
-  - name: Run tests
-  run: xcodebuild -project 'ContinousIntegration.xcodeproj' -scheme 'ContinousIntegration' -destination 'platform=iOS Simulator,name=iPhone 11' test
-  - name: Build App
-  run: xcodebuild -project 'ContinousIntegration.xcodeproj' -scheme 'ContinousIntegration' -destination 'generic/platform=iOS' -configuration Release build CODE_SIGNING_ALLOWED=NO
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run tests
+      run: xcodebuild -project 'ContinousIntegration.xcodeproj' -scheme 'ContinousIntegration' -destination 'platform=iOS Simulator,name=iPhone 11' test
+    - name: Build App
+      run: xcodebuild -project 'ContinousIntegration.xcodeproj' -scheme 'ContinousIntegration' -destination 'generic/platform=iOS' -configuration Release build CODE_SIGNING_ALLOWED=NO
