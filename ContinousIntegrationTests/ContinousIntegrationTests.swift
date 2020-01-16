@@ -20,4 +20,9 @@ class ContinousIntegrationTests: XCTestCase {
         let value = false
         XCTAssertFalse(value)
     }
+    
+    func testPrint() {
+        let printMe = "printer"
+        XCTAssertEqual(printMe, "printer")
+    }
 }
