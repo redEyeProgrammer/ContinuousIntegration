@@ -1,8 +1,8 @@
 name: Swift 
-  
-  on: [push]
-  
-  jobs:
+
+on: [push]
+
+jobs:
   build:
   
   runs-on: macOS-latest
